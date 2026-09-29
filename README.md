@@ -36,11 +36,26 @@ Daarnaast bevat de tool ook de hex-/dobbelsteen-entropie zoals SeedSigner (50 te
 | Bestand | Uitleg |
 |---|---|
 | `all-last-words-possibilities.html` | De tool zelf: één zelfstandig HTML-bestand, zonder netwerkverkeer en zonder opslag (strikte Content-Security-Policy). |
+| `all-last-words-possibilities.html.sig` | De GPG-handtekening van het HTML-bestand. Beide bestanden horen samen. |
 
 ## Downloaden en controleren
 
-1. Klik op `all-last-words-possibilities.html` en kies **Download raw file** (of gebruik **Code → Download ZIP**).
-2. Controleer de SHA-256-hash:
+1. Download **beide** bestanden (`.html` en `.html.sig`) via [Releases](https://github.com/wout2121/seedsigner-crosscheck-all-last-words/releases/latest), of klik op elk bestand en kies **Download raw file**.
+2. Controleer de GPG-handtekening:
+
+   ```bash
+   gpg --verify all-last-words-possibilities.html.sig all-last-words-possibilities.html
+   ```
+
+   De handtekening is gemaakt met de sleutel met fingerprint:
+
+   ```
+   CE1F B111 C2B5 FECC 91C3  6F11 C464 F440 9ED9 FEF2
+   ```
+
+   Je moet deze publieke sleutel eerst importeren (`gpg --import`) en de fingerprint via een onafhankelijk kanaal controleren.
+
+3. Optioneel: controleer de SHA-256-hash:
 
    ```bash
    sha256sum all-last-words-possibilities.html
