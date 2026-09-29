@@ -40,7 +40,7 @@ Daarnaast bevat de tool ook de hex-/dobbelsteen-entropie zoals SeedSigner (50 te
 
 ## Downloaden en controleren
 
-1. Download **beide** bestanden (`.html` en `.html.sig`) via [Releases](https://github.com/wout2121/seedsigner-crosscheck-all-last-words/releases/latest), of klik op elk bestand en kies **Download raw file**.
+1. Download **beide** bestanden (`.html` en `.html.sig`) via [Releases](https://github.com/wout2121/seedsigner-crosscheck-all-last-words/releases/latest) (Source code zip), of klik op elk bestand en kies **Download raw file**.
 2. Controleer de GPG-handtekening:
 
    ```bash
